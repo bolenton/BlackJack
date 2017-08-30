@@ -1,0 +1,13 @@
+<div class="container" *ngIf="deck">
+    <div *ngIf="deck.count > 0">
+        <img *ngIf="currentCard" [src]="currentCardimage" alt=""><br>
+        <button class="btn btn-primary" (click)="drawCard()">Draw!!</button>
+    </div>
+    <h2 (ngModel)="deck.count">{{ deck.count }}</h2>   
+     
+    <ul>
+      <li *ngFor="let image of initialCardsImages">
+        <img [src]="image" alt=""> 
+      </li>
+    </ul> 
+</div>
